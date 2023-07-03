@@ -115,7 +115,7 @@ function ViewOrderRes() {
          <div className="mt-4">
            <div className="flex items-center flex-col">
            <img
-                  src={state?.user?.avatar?.download_url}
+                  src="https://th.bing.com/th/id/OIP.Z306v3XdxhOaxBFGfHku7wHaHw?pid=ImgDet&rs=1"
                   alt="product-image"
                   className="w-24 h-20 rounded-md sm:w-40"
                 />
