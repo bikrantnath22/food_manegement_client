@@ -46,7 +46,7 @@ export default function CheckoutForm({ amount }) {
       elements,
       redirect: "always",
       confirmParams: {
-        return_url: "http://localhost:5173/payment-success",
+        return_url: "https://creative-pegasus-8abfbf.netlify.app/payment-success",
       },
     });
     
