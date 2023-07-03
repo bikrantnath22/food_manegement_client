@@ -82,7 +82,7 @@ const ShowOrder = ({ data, index }) => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-          },
+          }
         }
       );
       if (res.status == 200) {
@@ -137,7 +137,7 @@ const ShowOrder = ({ data, index }) => {
           </button>
         ) : (
           <div className="flex justify-center gap-2">
-            {user_id  === data?.order?.delivery?._id ? (
+            {user_id  === data?.delivery._id ? (
               <div>
                 <select
                   value={status}
