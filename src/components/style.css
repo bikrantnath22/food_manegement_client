@@ -1,0 +1,25 @@
+.cart-icon{
+    background-color: rgb(233, 95, 21);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top:14px;
+    right: 27px;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: flex; 
+    align-items: center ;
+    justify-content: center; 
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.cart-icon-mobile{
+    background-color: rgb(255, 255, 255);
+    color: rgb(230, 112, 28);
+    position: absolute;
+    top:8px;
+    right: 7px;
+    border-radius: 50%;
+    padding:1px 3px;
+}
