@@ -17,7 +17,7 @@ function OrderDriver() {
         }
       );
 
-      console.log(userResponse);
+      console.log(userResponse.data);
       setUser(userResponse.data);
     } catch (err) {
       console.error(err);
@@ -67,9 +67,9 @@ function OrderDriver() {
 }
 
 const ShowOrder = ({ data, index }) => {
-  const user_id  = localStorage.getItem("user_id");
-  console.log(user_id)
- 
+  const user_id = localStorage.getItem("user_id");
+  console.log(data, "----", data.delivery);
+
   const [status, setStatus] = useState(
     data.deliveryStatus == "pending" ? "Select" : data.deliveryStatus
   );
@@ -82,7 +82,7 @@ const ShowOrder = ({ data, index }) => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-          }
+          },
         }
       );
       if (res.status == 200) {
@@ -137,7 +137,7 @@ const ShowOrder = ({ data, index }) => {
           </button>
         ) : (
           <div className="flex justify-center gap-2">
-            {user_id  === data?.delivery._id ? (
+            {data.delivery && user_id === data?.delivery._id ? (
               <div>
                 <select
                   value={status}
