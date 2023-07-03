@@ -137,7 +137,7 @@ const ShowOrder = ({ data, index }) => {
           </button>
         ) : (
           <div className="flex justify-center gap-2">
-            {user_id  === data?._id ? (
+            {user_id  === data?.order?.delivery?._id ? (
               <div>
                 <select
                   value={status}
