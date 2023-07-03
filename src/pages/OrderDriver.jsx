@@ -74,12 +74,15 @@ const ShowOrder = ({ data, index }) => {
     data.deliveryStatus == "pending" ? "Select" : data.deliveryStatus
   );
   async function acceptOrder(id) {
+    const token = localStorage.getItem("token");
     try {
       const res = await axios.patch(
         `https://food-backend-grng.onrender.com/user/delivery/accept/${id}`,
         {},
         {
-          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
       if (res.status == 200) {
@@ -91,6 +94,7 @@ const ShowOrder = ({ data, index }) => {
     }
   }
   async function updateOrder(id) {
+    const token = localStorage.getItem("token");
     if (status == "Select") {
       return alert("Please select a value");
     }
@@ -101,7 +105,9 @@ const ShowOrder = ({ data, index }) => {
           status,
         },
         {
-          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
       if (res.status == 200) {
