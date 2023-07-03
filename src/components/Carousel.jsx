@@ -7,7 +7,7 @@ function Carousels() {
   return (
     <>
     <Carousel showArrows={true} showThumbs={false} autoPlay={true} showStatus={false}>
-                <div className=' '>
+                <div className=''>
                     <img style={{
                         width: '100%',
                         borderRadius:'20px',
@@ -16,7 +16,7 @@ function Carousels() {
                     
                 </div>
                 <div className=''>
-                    <img style={{
+                    <img  style={{
                         width: '100%',
                         borderRadius:'20px',
                         objectFit:'cover'

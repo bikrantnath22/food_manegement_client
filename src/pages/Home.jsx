@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full flex justify-center items-center p-4">
-        <div className="w-[90%] flex justify-center">
+        <div className="w-full md:w-[90%] flex justify-center">
           <Slide />
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Home() {
       </div>
       {verifyResturent() || verifyDriver() ? null : (
         <div className="flex justify-center">
-          <div className="w-[80%]">
+          <div className="md:w-[80%] w-[95%]">
             <p className="capitalize text-gray-600 font-semibold italic text-xl">
               Resturents
             </p>

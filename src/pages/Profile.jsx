@@ -83,22 +83,8 @@ function Profile() {
           <div className="bg-white shadow-xl rounded-lg py-3">
             <div className="photo-wrapper p-2 flex justify-center flex-col">
               {user.avatar && <RenderAvatar user={user} />}
-              <EditFilled
-                style={{
-                  fontSize: "20px",
-
-                  color: "#60d662",
-                  cursor: "pointer",
-                }}
-                onClick={() => fileRef.current.click()}
-              />
-              <input
-                type="file"
-                name="avatar"
-                ref={fileRef}
-                style={{ display: "none" }}
-                onChange={handleChange}
-              />
+              
+              
             </div>
             <div className="p-2">
               <input
@@ -107,18 +93,11 @@ function Profile() {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="John"
                 value={user?.name}
-                onChange={handleChange}
+                
                 name="name"
               />
 
-              <div className="flex justify-center mt-2">
-                <button
-                  class="bg-orange-300 hover:bg-orange-500 text-white rounded py-2 px-2 "
-                  onClick={handleUpdate}
-                >
-                  Submit
-                </button>
-              </div>
+             
 
               <table className="text-xs my-3">
                 <tbody>

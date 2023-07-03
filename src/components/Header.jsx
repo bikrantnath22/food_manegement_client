@@ -265,7 +265,7 @@ export default function Header() {
                       color: "white",
                     }}
                   />
-                  <span className="cart-icon-mobile">0</span>
+                  <span className="cart-icon-mobile">{cart.length}</span>
                 </Link>
               </div>
             </div>

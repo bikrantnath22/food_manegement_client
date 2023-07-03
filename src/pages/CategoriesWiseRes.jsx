@@ -29,11 +29,11 @@ function CategoriesWiseRes() {
   return (
     <div className="w-full flex justify-center items-center p-4">
       <div className="flex justify-center">
-        <div className="w-[80%]">
+        <div className="md:w-[80%] w-full">
           <p className="capitalize text-gray-600 font-semibold italic text-xl">
             Resturents
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
             {state &&
               state?.user?.map((data) => {
                 return (
